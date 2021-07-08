@@ -7,6 +7,7 @@ import ProCard from '@ant-design/pro-card';
 import { Form, Input, Checkbox } from 'antd';
 import ProTable from '@ant-design/pro-table';
 import type { ProColumns } from '@ant-design/pro-table';
+import { testData } from '@/services/ant-design-pro/api';
 
 const onFinish = (values: any) => {
   // eslint-disable-next-line no-console
@@ -98,6 +99,10 @@ const columns: ProColumns<TableListItem>[] = [
   },
 ];
 
+const getData = () => {
+  // testData
+  testData()
+}
 export default () => (
   // <div
   //   style={{
@@ -201,7 +206,7 @@ export default () => (
             </Form.Item>
 
             <Form.Item wrapperCol={{ offset: 4, span: 16 }}>
-              <Button type="primary" htmlType="submit">
+              <Button type="primary" htmlType="submit" onClick={getData}>
                 Submit
               </Button>
             </Form.Item>

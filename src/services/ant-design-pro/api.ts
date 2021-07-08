@@ -10,6 +10,13 @@ export async function currentUser(options?: { [key: string]: any }) {
   });
 }
 
+// 用于测试返回的数据
+export async function testData(){
+  return request<any>('/api/tags',{
+    method: 'GET',
+  })
+}
+
 /** 登录接口 POST /api/login/outLogin */
 export async function outLogin(options?: { [key: string]: any }) {
   return request<Record<string, any>>('/api/login/outLogin', {

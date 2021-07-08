@@ -51,6 +51,12 @@
       component: './MyTableList',
     },
     {
+      name:'list.use-form-list',
+      icon:'table',
+      path:'/formtest',
+      component: './DemoForm'
+    },
+    {
       path: '/',
       redirect: '/welcome',
     },
